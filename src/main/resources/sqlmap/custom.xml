@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.chinaunicom.testweb.dao.CustomDao">
+	
+	<select id="searchIndustry" resultType="com.chinaunicom.testweb.pojo.Industry" >
+		select principle_industry_name industry,industry_main_product_name detailIndustry,
+		industry_detail_product_name product,count(customer_name) customerNum,
+		sum(ACTUAL_CONNECT)  actualConnect
+		from dm_custom_2018 where CUSTOM_STATE_TYPE=03 
+		and principle_industry_name =#{industry}  
+		group by industry_detail_product_name 
+		order by principle_industry_name,industry_main_product_name, industry_detail_product_name		
+	</select>
+	
+	<select id="searchCustomer" resultType="com.chinaunicom.testweb.pojo.Customer" >
+		select customer_name customer,ACCOUNT_ID accountId,principle_industry_name industry,
+		industry_main_product_name detail,PROVINCE_NAME province,CITY_NAME city,
+		industry_detail_product_name product,
+		sum(ACTUAL_CONNECT) actualConnect from dm_custom_2018 where CUSTOM_STATE_TYPE=03 
+		and( customer_name=#{customer} or ACCOUNT_ID=#{customer} )
+		group by industry_detail_product_name 
+		order by customer_name,ACCOUNT_ID,principle_industry_name,
+		industry_main_product_name,PROVINCE_NAME,CITY_NAME,industry_detail_product_name;		
+	</select>
+	
+	<select id="searchProvince" resultType="com.chinaunicom.testweb.pojo.Province" >
+		select PROVINCE_NAME province,CITY_NAME city,
+		count(ACCOUNT_ID) customerNum,sum(ACTUAL_CONNECT) actualConnect from dm_custom_2018
+		where CUSTOM_STATE_TYPE=03 and(PROVINCE_NAME =#{province} or PROVINCE=#{province}
+ 		or CITY_NAME=#{province} or CITY=#{province})
+		group by CITY_NAME order by PROVINCE_NAME,CITY_NAME;		
+	</select>
+	
+	<select id="searchCount" resultType="com.chinaunicom.testweb.pojo.Device" >
+		select count(*) actualConnect from imsi_snapshot   
+		where  accountid = #{accountid} and  imei like '${tac}%';		
+	</select>
+	 
+	 <select id="searchDevice" resultType="com.chinaunicom.testweb.pojo.Device" >
+		select * from (
+		select  industry_detail_product_name product,
+		customer_name customer,principle_industry_name industry,PROVINCE_NAME province,CITY_NAME city
+		from dm_custom_2018  where   ACCOUNT_ID = #{accountid}  limit 1 
+ 		 )a, 
+		(select  COMPANY_NAME companyName, MODEL_NAME modelName,
+		 NETWORK_TYPE networkType from dim_tac_label   where tac=#{tac})b		
+	</select>
+	<select id="searchAccountId" resultType="com.chinaunicom.testweb.pojo.Device" >
+		select accountid from imsi_snapshot where imei =#{imei};	
+	</select>
+	
+	<select id="searchKeywordName" parameterType="com.chinaunicom.testweb.pojo.Message" resultType="com.chinaunicom.testweb.pojo.Customer" >
+		select distinct customer_name customer from dm_custom_2018 where CUSTOM_STATE_TYPE=03  and customer_name like '%${msg}%' limit 10;
+	</select>
+	
+	<select id="searchKeywordImei" parameterType="com.chinaunicom.testweb.pojo.Message" resultType="com.chinaunicom.testweb.pojo.Device" >
+		select imei from imsi_snapshot where imei like '%${msg}%' limit 10;
+	</select>
+	
+	 
+</mapper>

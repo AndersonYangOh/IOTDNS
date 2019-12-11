@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>XXXX</title>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/base.css">
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/echarts.js"></script>
+	<script src="js/btn.js"></script>
+	<script src="js/search.js"></script>
+	<script type="text/javascript" src="charts/chart-1.js"></script>
+	<script type="text/javascript" src="charts/chart-2.js"></script>
+	<script type="text/javascript" src="charts/chart-3.js"></script>
+	<script type="text/javascript" src="charts/chart-4.js"></script>
+</head>
+<body>
+	<div class="main">
+			
+
+		<!-- 头部 -->
+		<div class="header">
+			<ul>
+				<li>
+					<img class="light" src="img/left-light.png">
+					<p id="date"></p>
+				</li>
+				<li>
+					<p>XXXXXXXXXXXXXXXXXX</p>
+				</li>
+				<li>
+					<img class="light"  src="img/right-light.png">
+					<p id="time"></p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="header-bg">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<!-- 主要内容 -->
+		<div class="top">
+
+			<div class="top_left">
+				<p class="box-title">行业</p>
+				<div class="content">
+					<div class="chart" id="chart1"></div>
+					<ul class="list_title">
+						<li>行业名称</li>
+						<li>细分重点行业</li>
+						<li>重点行业应用</li>
+						<li>注册企业数量</li>
+						<li>注册设备数量</li>
+						<li>赋能次数</li>
+					</ul>
+					<div id="demo0" style="overflow: hidden; height: 150px;">
+						<div id="demo01" style="height: 630px;">
+							<ul class="data_list">
+								<li>
+									<ul class="list_content">
+										<li>轻工家电</li>
+										<li>工程机械</li>
+										<li>电子设备制造</li>
+										<li>钢铁</li>
+										<li>高端装备</li>
+										<li>建筑</li>
+										<li>船舶</li>
+										<li>电力</li>
+										<li>食品制造加工</li>
+										<li>纺织</li>
+										<li>医药制造</li>
+										<li>燃气生产和供应</li>
+										<li>化学纤维制造</li>
+										<li>家具制造</li>
+										<li>烟草</li>
+										<li>文娱用品制造</li>
+										<li>汽车</li>
+										<li>铁路</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list_content">
+										<li>设备/产品管理</li>
+										<li>生产过程管控</li>
+										<li>设备/产品管理</li>
+										<li>企业运营管理</li>
+										<li>设备/产品管理</li>
+										<li>企业运营管理</li>
+										<li>产品研发设计</li>
+										<li>企业运营管理</li>
+										<li>企业运营管理</li>
+										<li>生产过程管控</li>
+										<li>设备/产品管理</li>
+										<li>产品研发设计</li>
+										<li>生产过程管控</li>
+										<li>生产过程管控</li>
+										<li>企业运营管理</li>
+										<li>产品研发设计</li>
+										<li>设备/产品管理</li>
+										<li>设备/产品管理</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list_content">
+										<li>故障诊断</li>
+										<li>生产制造优化</li>
+										<li>状态监测</li>
+										<li>供应链管理</li>
+										<li>远程运维</li>
+										<li>供应链管理</li>
+		 								<li>数字化设计与仿真</li>
+										<li>能源管理</li>
+										<li>供应链管理</li>
+										<li>生产制造优化</li>
+										<li>状态监测</li>
+										<li>数字化设计与仿真</li>
+										<li>生产制造优化</li>
+										<li>质量管理</li>
+										<li>安全管理</li>
+										<li>数字化设计与仿真</li>
+										<li>预测性维护</li>
+										<li>状态监测</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list_content">
+										<li>1364</li>
+										<li>1014</li>
+										<li>2520</li>
+										<li>77</li>
+										<li>2001</li>
+										<li>112</li>
+										<li>153</li>
+										<li>105</li>
+										<li>652</li>
+										<li>177</li>
+										<li>601</li>
+										<li>49</li>
+										<li>109</li>
+										<li>274</li>
+										<li>26</li>
+										<li>211</li>
+										<li>539</li>
+										<li>106</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list_content">
+										<li>3887056</li>
+										<li>4697336</li>
+										<li>2573611</li>
+										<li>6293440</li>
+										<li>874740</li>
+										<li>197011</li>
+										<li>85707</li>
+										<li>8079832</li>
+										<li>2827704</li>
+										<li>8782500</li>
+										<li>7942763</li>
+										<li>5969139</li>
+										<li>4909444</li>
+										<li>8915879</li>
+										<li>918829</li>
+										<li>5524513</li>
+										<li>2389320</li>
+										<li>683133</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="list_content">
+										<li>695349</li>
+										<li>72793</li>
+										<li>992728</li>
+										<li>312932</li>
+										<li>625639</li>
+										<li>566644</li>
+										<li>195798</li>
+										<li>353495</li>
+										<li>784771</li>
+										<li>273618</li>
+										<li>471847</li>
+										<li>504486</li>
+										<li>509774</li>
+										<li>32330</li>
+										<li>692274</li>
+										<li>82806</li>
+										<li>133108</li>
+										<li>818002</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div id="demo02"></div>
+					</div>
+				</div>		
+			</div>
+
+		 	<!-- 大数字 -->
+			<div class="number">
+				<div class="num1">
+					<h2 class="title_s">注册企业</h2>
+					<div class="big_1">
+						<span>3</span>
+						<span>7</span>
+						<span id="no">,</span>
+						<span>9</span>
+						<span>8</span>
+						<span>7</span>
+						<span id="dw1">个</span>
+					</div>
+				</div>
+				<div class="num2">
+					<h2 class="title_s">赋能次数</h2>
+					<div class="big_2">
+						<span>2</span>
+						<span>6</span>
+						<span>5</span>
+						<span id="dw2">百万次</span>
+					</div>
+				</div>
+
+				<div id ="search">
+					<div class="btn">
+						<input type="button" value ="行业" onclick="" class="button active" >
+						<input type="button" value ="企业" onclick="" class="button">
+						<input type="button" value ="地域" onclick="" class="button">
+						<input type="button" value ="设备" onclick="" class="button">	
+					</div>
+					
+					<div id="search_area">
+						<input id="search_box" type="text" placeholder="请输入行业名称">
+						<input id="search_button" type="button" value="查询">
+					</div>
+					
+				
+				</div>
+
+			</div>	
+
+
+			<div class="top_right">
+				<p class="box-title">企业</p>
+				<div class="content">
+					<div class="chart" id="chart2"></div>
+					<ul class="list_title">
+						<li>企业名称</li>
+						<li>企业类型</li>
+						<li>注册地</li>
+						<li>重点应用</li>
+						<li>注册设备数量</li>
+						<li>赋能次数</li>
+					</ul>
+					<div id="demo1" style="overflow: hidden; height: 150px;">
+					<div id="demo11" style="height: 1715px;">
+					<ul class="data_list">
+						<li>
+							<ul class="list_content">
+								<li>北京扬天在线信息技术有限公司</li>
+								<li>郑州椿长仪器仪表有限公司</li>
+								<li>北京鑫鹏旺管业有限公司</li>
+								<li>众海汇智(长沙)智能制造有限责任公司</li>
+								<li>翼猫科技发展(上海)有限公司</li>
+								<li>苏州索克维尔信息技术有限公司</li>
+								<li>杭州络河科技有限公司</li>
+								<li>烟台鼎信液压机械设备有限公司</li>
+								<li>浙江擎海信息科技股份有限公司</li>
+								<li>浙江美店网络科技有限公司</li>
+								<li>上海祐云信息技术有限公司</li>
+								<li>苏州艾克威尔科技有限公司</li>
+								<li>安徽晶太信息科技有限公司</li>
+								<li>上海固越电子科技有限公司</li>
+								<li>北京海博创源科技有限公司</li>
+								<li>惠州中广通网络科技有限公司</li>
+								<li>吉林省鹰之眼通信技术有限公司</li>
+								<li>沈阳宏胜丰科技有限公司</li>
+								<li>许昌益万再生资源有限公司</li>
+								<li>广州睿铭信息科技有限公司</li>
+								<li>北京大算信息科技有限公司</li>
+								<li>郑州中泽电子科技有限公司</li>
+								<li>河南省大别山通信技术有限公司</li>
+								<li>上海国际汽车城新能源汽车运营服务有限公司</li>
+								<li>天津众凯网络科技有限公司</li>
+								<li>江苏省精创电气股份有限公司</li>
+								<li>浙江先芯科技有限公司</li>
+								<li>陕西天成秦安有色金属经营有限公司</li>
+								<li>湖南华瑞联芯物联网应用技术有限公司</li>
+								<li>东信和平科技股份有限公司</li>
+								<li>北京联信诚盟科技有限公司</li>
+								<li>大连汉普科技发展有限公司</li>
+								<li>广东国邦清洁设备有限公司</li>
+								<li>宁波祥元恒通网络科技有限公司</li>
+								<li>武汉源创伟业科技有限公司</li>
+								<li>河南力安测控科技有限公司..</li>
+								<li>点典科技(上海)有限公司中山分公司</li>
+								<li>武汉迪鳌科技有限公司</li>
+								<li>摩托罗拉(武汉)移动技术通信有限公司</li>
+								<li>济南兆格信息科技有限公司</li>
+								<li>苏州太谷电力股份有限公司</li>
+								<li>杭州欧朗电器有限公司</li>
+								<li>三河市友邻网络科技有限公司</li>
+								<li>北京农业智能装备技术研究中心</li>
+								<li>盛途信息技术(上海)有限公司</li>
+								<li>广州智科网络有限公司</li>
+								<li>浙江海康科技有限公司</li>
+								<li>珠海网博信息科技股份有限公司</li>
+								<li>重庆易易商科技股份有限公司</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>电子设备制造</li>
+								<li>工程机械</li>
+								<li>建筑</li>
+								<li>电力</li>
+								<li>医药制造</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>工程机械</li>
+								<li>电子设备制造</li>
+								<li>轻工家电</li>
+								<li>电子设备制造</li>
+								<li>电力电子</li>
+								<li>电子设备制造</li>
+								<li>电力电子</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>高端装备</li>
+								<li>燃气生产和供应</li>
+								<li>电子设备制造</li>
+								<li>电力电子</li>
+								<li>电力电子</li>
+								<li>电子设备制造</li>
+								<li>汽车</li>
+								<li>电子设备制造</li>
+								<li>电力</li>
+								<li>工程机械</li>
+								<li>钢铁</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>轻工家电</li>
+								<li>电子设备制造</li>
+								<li>工程机械</li>
+								<li>工程机械</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>电力</li>
+								<li>轻工家电</li>
+								<li>轻工家电</li>
+								<li>工程机械</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>轻工机械</li>
+								<li>电子设备制造</li>
+								<li>轻工家电</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>北京</li>
+								<li>郑州</li>
+								<li>北京</li>
+								<li>长沙</li>
+								<li>上海</li>
+								<li>苏州</li>
+								<li>杭州</li>
+								<li>烟台</li>
+								<li>浙江</li>
+								<li>浙江</li>
+								<li>上海</li>
+								<li>苏州</li>
+								<li>安徽</li>
+								<li>上海</li>
+								<li>北京</li>
+								<li>惠州</li>
+								<li>吉林</li>
+								<li>沈阳</li>
+								<li>许昌</li>
+								<li>广州</li>
+								<li>北京</li>
+								<li>郑州</li>
+								<li>河南</li>
+								<li>上海</li>
+								<li>天津</li>
+								<li>江苏</li>
+								<li>浙江</li>
+								<li>陕西</li>
+								<li>湖南</li>
+								<li>珠海</li>
+								<li>北京</li>
+								<li>大连</li>
+								<li>广东</li>
+								<li>宁波</li>
+								<li>武汉</li>
+								<li>河南</li>
+								<li>上海</li>
+								<li>武汉</li>
+								<li>武汉</li>
+								<li>济南</li>
+								<li>苏州</li>
+								<li>杭州</li>
+								<li>廊坊</li>
+								<li>北京</li>
+								<li>上海</li>
+								<li>广州</li>
+								<li>浙江</li>
+								<li>珠海</li>
+								<li>重庆</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>供应链管理</li>
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>数字化设计与仿真</li>
+								<li>生产制造优化</li>
+								<li>生产制造优化</li>
+								<li>生产制造优化</li>
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>生产制造优化</li>
+								<li>质量管理</li>
+								<li>安全管理</li>
+								<li>数字化设计与仿真</li>
+								<li>故障诊断</li>
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>能源管理</li>
+								<li>供应链管理</li>
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>企业运营管理</li>
+								<li>企业运营管理</li>
+								<li>生产过程管控</li>
+								<li>设备/产品管理</li>
+								<li>产品研发设计</li>
+								<li>生产过程管控</li>
+								<li>生产过程管控</li>
+								<li>设备/产品管理</li>
+								<li>设备/产品管理</li>
+								<li>供应链管理</li>
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>数字化设计与仿真</li>
+								<li>生产过程管控</li>
+								<li>供应链管理</li>
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>数字化设计与仿真</li>
+								<li>生产过程管控</li>
+								<li>生产过程管控</li>
+								<li>生产过程管控</li>
+								<li>生产过程管控</li>
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>生产制造优化</li>
+								<li>状态监测</li>
+								<li>生产过程管控</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>113352</li>
+								<li>77557</li>
+								<li>52382</li>
+								<li>52372</li>
+								<li>52352</li>
+								<li>48941</li>
+								<li>46352</li>
+								<li>45062</li>
+								<li>39504</li>
+								<li>36552</li>
+								<li>33152</li>
+								<li>32352</li>
+								<li>32034</li>
+								<li>27106</li>
+								<li>25652</li>
+								<li>25398</li>
+								<li>25376</li>
+								<li>24352</li>
+								<li>22452</li>
+								<li>22352</li>
+								<li>22352</li>
+								<li>22352</li>
+								<li>22337</li>
+								<li>20959</li>
+								<li>20356</li>
+								<li>19739</li>
+								<li>19234</li>
+								<li>19209</li>
+								<li>16926</li>
+								<li>15739</li>
+								<li>14933</li>
+								<li>14109</li>
+								<li>13302</li>
+								<li>12564</li>
+								<li>12504</li>
+								<li>12352</li>
+								<li>12352</li>
+								<li>12352</li>
+								<li>11379</li>
+								<li>11269</li>
+								<li>10852</li>
+								<li>10448</li>
+								<li>10359</li>
+								<li>9152</li>
+								<li>8772</li>
+								<li>8692</li>
+								<li>8654</li>
+								<li>8452</li>
+								<li>8452</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>186767</li>
+								<li>757453</li>
+								<li>269579</li>
+								<li>541734</li>
+								<li>168773</li>
+								<li>373131</li>
+								<li>855930</li>
+								<li>283167</li>
+								<li>925225</li>
+								<li>558993</li>
+								<li>623934</li>
+								<li>285911</li>
+								<li>330347</li>
+								<li>452262</li>
+								<li>31070</li>
+								<li>398712</li>
+								<li>668770</li>
+								<li>690590</li>
+								<li>780118</li>
+								<li>100011</li>
+								<li>283854</li>
+								<li>379564</li>
+								<li>475473</li>
+								<li>17777</li>
+								<li>375600</li>
+								<li>351689</li>
+								<li>962817</li>
+								<li>847016</li>
+								<li>208521</li>
+								<li>379975</li>
+								<li>95944</li>
+								<li>541815</li>
+								<li>337055</li>
+								<li>114633</li>
+								<li>761463</li>
+								<li>680814</li>
+								<li>653429</li>
+								<li>119918</li>
+								<li>711458</li>
+								<li>891102</li>
+								<li>150451</li>
+								<li>720536</li>
+								<li>479594</li>
+								<li>434764</li>
+								<li>204818</li>
+								<li>487617</li>
+								<li>938479</li>
+								<li>752742</li>
+								<li>407950</li>
+							</ul>
+						</li>
+					</ul>
+					</div>
+					<div id="demo12"></div>
+					</div>
+				</div>		
+			</div>
+
+		</div>
+
+<!-- bottom -->
+
+		<div class="bottom">
+
+			<div class="bottom_left">
+				<p class="box-title">地域</p>
+				<div class="content">
+					<div class="chart" id="chart3""></div>
+					<ul class="list_title">
+						<li>省分名称</li>
+						<li>细分重点类型</li>
+						<li>重点行业数量</li>
+						<li>注册企业数量</li>
+						<li>注册设备数量</li>
+						<li>赋能次数</li>
+<!-- 						<li>生产总值</li> -->
+					</ul>
+					<div id="demo2" style="overflow: hidden; height: 70px;">
+					<div id="demo21" style="height: 1085px;">
+					<ul class="data_list">
+						<li>
+							<ul class="list_content">
+								<li>北京</li>
+								<li>天津</li>
+								<li>上海</li>
+								<li>重庆</li>
+								<li>河北</li>
+								<li>山西</li>
+								<li>辽宁</li>
+								<li>吉林</li>
+								<li>黑龙江</li>
+								<li>江苏</li>
+								<li>浙江</li>
+								<li>安徽</li>
+								<li>福建</li>
+								<li>江西</li>
+								<li>山东</li>
+								<li>河南</li>
+								<li>湖北</li>
+								<li>湖南</li>
+								<li>广东</li>
+								<li>海南</li>
+								<li>四川</li>
+								<li>贵州</li>
+								<li>云南</li>
+								<li>陕西</li>
+								<li>甘肃</li>
+								<li>青海</li>
+								<li>内蒙古</li>
+								<li>广西</li>
+								<li>西藏</li>
+								<li>宁夏</li>
+								<li>新疆</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>建筑</li>
+								<li>家具制造</li>
+								<li>轻工家电</li>
+								<li>食品制造加工</li>
+								<li>钢铁</li>
+								<li>化学纤维制造</li>
+								<li>船舶</li>
+								<li>文娱用品制造</li>
+								<li>轻工家电</li>
+								<li>医药制造</li>
+								<li>高端装备</li>
+								<li>食品制造加工</li>
+								<li>文娱用品制造</li>
+								<li>化学纤维制造</li>
+								<li>电子设备制造</li>
+								<li>电子设备制造</li>
+								<li>电力</li>
+								<li>轻工家电</li>
+								<li>电子设备制造</li>
+								<li>家具制造</li>
+								<li>铁路</li>
+								<li>电子设备制造</li>
+								<li>纺织</li>
+								<li>建筑</li>
+								<li>燃气生产和供应</li>
+								<li>家具制造</li>
+								<li>工程机械</li>
+								<li>纺织</li>
+								<li>食品制造加工</li>
+								<li>轻工家电</li>
+								<li>燃气生产和供应</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>8</li>
+								<li>6</li>
+								<li>4</li>
+								<li>7</li>
+								<li>9</li>
+								<li>2</li>
+								<li>3</li>
+								<li>7</li>
+								<li>4</li>
+								<li>5</li>
+								<li>16</li>
+								<li>6</li>
+								<li>6</li>
+								<li>5</li>
+								<li>2</li>
+								<li>6</li>
+								<li>7</li>
+								<li>4</li>
+								<li>14</li>
+								<li>1</li>
+								<li>8</li>
+								<li>4</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>1</li>
+								<li>8</li>
+								<li>5</li>
+								<li>2</li>
+								<li>2</li>
+								<li>3</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>1416</li>
+								<li>534</li>
+								<li>785</li>
+								<li>337</li>
+								<li>905</li>
+								<li>662</li>
+								<li>1316</li>
+								<li>201</li>
+								<li>239</li>
+								<li>1296</li>
+								<li>1151</li>
+								<li>549</li>
+								<li>326</li>
+								<li>316</li>
+								<li>1493</li>
+								<li>931</li>
+								<li>594</li>
+								<li>578</li>
+								<li>2692</li>
+								<li>140</li>
+								<li>558</li>
+								<li>198</li>
+								<li>88</li>
+								<li>352</li>
+								<li>57</li>
+								<li>19</li>
+								<li>289</li>
+								<li>293</li>
+								<li>15</li>
+								<li>81</li>
+								<li>279</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>9130569</li>
+								<li>2219996</li>
+								<li>5557401</li>
+								<li>2088850</li>
+								<li>3957019</li>
+								<li>2185342</li>
+								<li>8953761</li>
+								<li>2115626</li>
+								<li>736420</li>
+								<li>15665313</li>
+								<li>5310947</li>
+								<li>1925622</li>
+								<li>1726304</li>
+								<li>971631</li>
+								<li>11221438</li>
+								<li>4202577</li>
+								<li>4024406</li>
+								<li>1645880</li>
+								<li>23468738</li>
+								<li>543171</li>
+								<li>2158850</li>
+								<li>1671495</li>
+								<li>297279</li>
+								<li>1081404</li>
+								<li>174437</li>
+								<li>58686</li>
+								<li>4135381</li>
+								<li>1190544</li>
+								<li>34393</li>
+								<li>243217</li>
+								<li>1131958</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="list_content">
+								<li>2341294</li>
+								<li>7196304</li>
+								<li>773670</li>
+								<li>8778193</li>
+								<li>5949039</li>
+								<li>3947891</li>
+								<li>7148690</li>
+								<li>2442379</li>
+								<li>9123269</li>
+								<li>7891973</li>
+								<li>4868387</li>
+								<li>2377310</li>
+								<li>9011147</li>
+								<li>5258679</li>
+								<li>1404104</li>
+								<li>7612459</li>
+								<li>3802124</li>
+								<li>7865691</li>
+								<li>6008717</li>
+								<li>5098698</li>
+								<li>4957376</li>
+								<li>3254256</li>
+								<li>7528262</li>
+								<li>7417388</li>
+								<li>7825342</li>
+								<li>6956738</li>
+								<li>180204</li>
+								<li>3257931</li>
+								<li>9031183</li>
+								<li>7692417</li>
+								<li>8348155</li>
+							</ul>
+						</li>
+<!-- 						<li> -->
+<!-- 							<ul class="list_content"> -->
+<!-- 								<li>生产总值1</li> -->
+<!-- 								<li>生产总值2</li> -->
+<!-- 								<li>生产总值3</li> -->
+<!-- 							</ul> -->
+<!-- 						</li> -->
+					</ul>
+					</div>
+					<div id="demo22"></div>
+					</div>
+				</div>		
+			</div>
+
+			<div class="bottom_right">
+				<p class="box-title">设备</p>
+				<div class="content">
+					<div class="chart" id="chart4""></div>
+					<ul class="list_title">
+						<li>设备名称</li>
+						<li>设备品牌</li>
+						<li>设备型号</li>
+						<li>生产场地</li>
+						<li>出厂日期</li>
+						<li>生产序列号</li>
+						<li>功能用途</li>
+						<li>网络类型</li>
+						<li>终端所在地</li>
+<!-- 						<li id="long">数据接口类型</li> -->
+					</ul>
+					<div id="demo3" style="overflow: hidden; height: 70px;">
+					<div id="demo31" style="height: 1750px;">
+						<ul class="data_list">
+							<li>
+								<ul class="list_content">
+									<li>电源时序器</li>
+									<li>三相电机正反转无线遥控开关</li>
+									<li>工业温控器</li>
+									<li>以太网IP网络继电器</li>
+									<li>仓库盘点机</li>
+									<li>idata95V/W/S数据采集器</li>
+									<li>终端网络系统融合器</li>
+									<li>安卓智能采集器</li>
+									<li>智能车载终端OBD</li>
+									<li>手持机GPS智能终端</li>
+									<li>L2智能数据采集器</li>
+									<li>智联天地N2S000PDA采集器</li>
+									<li>A200车载多功能抬头显示器</li>
+									<li>汽车车载智能终端obd智慧盒子</li>
+									<li>VCU智能终端网约车一键报警OBD</li>
+									<li>智能手表</li>
+									<li>4G网络智能手表</li>
+									<li>小天才电话手表</li>
+									<li>华为e5573不限流量随身移动wifi</li>
+									<li>本腾随身wifi</li>
+									<li>吉客猫4G无线路由器</li>
+									<li>乐光随身wifi</li>
+									<li>优博讯i6200A企业级安全智能终端无线扫描枪</li>
+									<li>华为WATCH2代Pro3智能手表</li>
+									<li>互联移动4G流媒体后视镜</li>
+									<li>任我游全屏流媒体行车记录仪</li>
+									<li>蓝牙APP智能马蹄锁</li>
+									<li>ZT马蹄锁</li>
+									<li>智能插卡摄像头监控器一体机</li>
+									<li>护车宝GPS定位器</li>
+									<li>GPS定位器汽车北斗卫星车队管理平台</li>
+									<li>i9100移动智能云POS</li>
+									<li>RFID超高频V5000UHF系列手持数据终端</li>
+									<li>扫码支付盒子Q500</li>
+									<li>电商物流配送专用手持终端i9000A</li>
+									<li>掌贝智能POS Z5</li>
+									<li>NB-IOT 智能烟感烟雾报警器</li>
+									<li>同声翻译机</li>
+									<li>4G全网通手持终端机PDA条码智能盘点机</li>
+									<li>4G全网通定制型12寸工业平板电脑</li>
+									<li>4g无线路由器模块工业级</li>
+									<li>防爆智能手机全网通4G化工厂石油管道专用</li>
+									<li>信翼工业级4G无线路由器</li>
+									<li>有人DTU</li>
+									<li>4G监控模组AF760</li>
+									<li>QL810工业级4G短信报警模块</li>
+									<li>4G网络摄像机无线监控室外一体机</li>
+									<li>东大集成小码哥CRUISE1智能工业级手机PDA</li>
+									<li>4G全网通7寸工业三防平板多功能RFID串口扫描头</li>
+									<li>东凌工控安卓10寸10.1寸工业一体机</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="list_content">
+									<li>DEPUSHENG</li>
+									<li>洁旺</li>
+									<li>希崖</li>
+									<li>泥人科技</li>
+									<li>SUNMI/商米</li>
+									<li>IDATA</li>
+									<li>信特安</li>
+									<li>智联天地</li>
+									<li>迈卡盾</li>
+									<li>集思宝</li>
+									<li>SUNMI/商米</li>
+									<li>newland/新大陆</li>
+									<li>胎牛</li>
+									<li>车智汇</li>
+									<li>慧易行</li>
+									<li>mifeng</li>
+									<li>ZZSino</li>
+									<li>小天才</li>
+									<li>Huawei/华为</li>
+									<li>Benton/本腾</li>
+									<li>酷迷</li>
+									<li>乐光</li>
+									<li>UROVO/优博讯</li>
+									<li>Huawei/华为</li>
+									<li>HUNYDON/互联移动</li>
+									<li>GOU/任我游</li>
+									<li>欧米</li>
+									<li>Zentorack</li>
+									<li>亚太</li>
+									<li>护车宝</li>
+									<li>Crosselec/凯诺思</li>
+									<li>优博讯</li>
+									<li>优博讯</li>
+									<li>优博讯</li>
+									<li>优博讯</li>
+									<li>掌贝</li>
+									<li>KEXINA/科信安</li>
+									<li>恒正科技</li>
+									<li>ZHIMA</li>
+									<li>东凌工控</li>
+									<li>有人</li>
+									<li>GOFLY/捷语</li>
+									<li>信翼</li>
+									<li>有人</li>
+									<li>合众</li>
+									<li>QL</li>
+									<li>雄迈</li>
+									<li>东大集成</li>
+									<li>雨滴科技</li>
+									<li>东凌智能</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="list_content">
+									<li>D428</li>
+									<li>XFYK-18</li>
+									<li>CHB</li>
+									<li>TCP-KP-I2O2</li>
+									<li></li>
+									<li>95V</li>
+									<li>XTA3188</li>
+									<li></li>
+									<li>OBD</li>
+									<li>A5</li>
+									<li></li>
+									<li></li>
+									<li>途驰安A100/A200</li>
+									<li>vgate</li>
+									<li>LCRECS01V01</li>
+									<li>MFP03</li>
+									<li>W10</li>
+									<li>XTC Z5q</li>
+									<li>E5573s-856</li>
+									<li>M100</li>
+									<li>GlocalMe E1</li>
+									<li>MQ100</li>
+									<li></li>
+									<li>LEO-DLXX</li>
+									<li>V93</li>
+									<li>SA68</li>
+									<li></li>
+									<li>zt-806</li>
+									<li>Q5</li>
+									<li>GV25PX</li>
+									<li></li>
+									<li>i9100</li>
+									<li>V5000UHF</li>
+									<li>Q500</li>
+									<li>i9000A</li>
+									<li>Z5</li>
+									<li>JTY-GF-TX3190</li>
+									<li></li>
+									<li>V9000S</li>
+									<li>PPC-DL121D</li>
+									<li>USR-G806</li>
+									<li>X2</li>
+									<li>D521</li>
+									<li>USR-G780 V2</li>
+									<li>HZ-4GMK</li>
+									<li>QL810</li>
+									<li></li>
+									<li>CRUISE1</li>
+									<li>ITAB-01</li>
+									<li>PPC-DL101AN</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="list_content">
+									<li>深圳</li>
+									<li>温州</li>
+									<li>上海</li>
+									<li>珠海</li>
+									<li>上海</li>
+									<li>无锡</li>
+									<li>深圳</li>
+									<li>广州</li>
+									<li>上海</li>
+									<li>北京</li>
+									<li>上海</li>
+									<li>苏州</li>
+									<li>广州</li>
+									<li>深圳</li>
+									<li>广州</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>北京</li>
+									<li>南宁</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>广州</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>上海</li>
+									<li>深圳</li>
+									<li>金华</li>
+									<li>东莞</li>
+									<li>上海</li>
+									<li>杭州</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>广州</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>济南</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>济南</li>
+									<li>深圳</li>
+									<li>杭州</li>
+									<li>深圳</li>
+									<li>广州</li>
+									<li>深圳</li>
+									<li>深圳</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="list_content">
+									<li>2018.02</li>
+									<li>2016.07</li>
+									<li>2017.04</li>
+									<li>2016.03</li>
+									<li>2018.07</li>
+									<li>2017.03</li>
+									<li>2018.02</li>
+									<li>2017.11</li>
+									<li>2018.12</li>
+									<li>2017.01</li>
+									<li>2017.02</li>
+									<li>2016.06</li>
+									<li>2018.02</li>
+									<li>2016.09</li>
+									<li>2018.01</li>
+									<li>2017.11</li>
+									<li>2017.1</li>
+									<li>2016.12</li>
+									<li>2017.01</li>
+									<li>2018.03</li>
+									<li>2018.01</li>
+									<li>2017.12</li>
+									<li>2018.1</li>
+									<li>2018.03</li>
+									<li>2017.01</li>
+									<li>2016.09</li>
+									<li>2016.12</li>
+									<li>2017.01</li>
+									<li>2017.03</li>
+									<li>2016.12</li>
+									<li>2017.01</li>
+									<li>2018.01</li>
+									<li>2018.03</li>
+									<li>2016.12</li>
+									<li>2016.11</li>
+									<li>2016.03</li>
+									<li>2017.01</li>
+									<li>2017.01</li>
+									<li>2017.03</li>
+									<li>2017.03</li>
+									<li>2017.11</li>
+									<li>2016.12</li>
+									<li>2016.09</li>
+									<li>2018.03</li>
+									<li>2018.06</li>
+									<li>2018.12</li>
+									<li>2017.02</li>
+									<li>2016.12</li>
+									<li>2017.06</li>
+									<li>2018.1</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="list_content">
+									<li>********3867467</li>
+									<li>********5933473</li>
+									<li>********5897862</li>
+									<li>********5083170</li>
+									<li>********4922596</li>
+									<li>********6578053</li>
+									<li>********5091641</li>
+									<li>********7928706</li>
+									<li>********5084316</li>
+									<li>********5908327</li>
+									<li>********8344700</li>
+									<li>********3784963</li>
+									<li>********7959546</li>
+									<li>********2958551</li>
+									<li>********7108293</li>
+									<li>********6968530</li>
+									<li>********2424772</li>
+									<li>********5353773</li>
+									<li>********6768477</li>
+									<li>********2652902</li>
+									<li>********3992718</li>
+									<li>********3507323</li>
+									<li>********1532479</li>
+									<li>********7046651</li>
+									<li>********5524508</li>
+									<li>********6363956</li>
+									<li>********1739419</li>
+									<li>********6958028</li>
+									<li>********2237838</li>
+									<li>********4543011</li>
+									<li>********4267706</li>
+									<li>********7672274</li>
+									<li>********5236645</li>
+									<li>********3744369</li>
+									<li>********2961596</li>
+									<li>********9460030</li>
+									<li>********1088713</li>
+									<li>********5713046</li>
+									<li>********1398250</li>
+									<li>********2669619</li>
+									<li>********1965616</li>
+									<li>********4530307</li>
+									<li>********3079398</li>
+									<li>********2938535</li>
+									<li>********9927591</li>
+									<li>********5269700</li>
+									<li>********3325650</li>
+									<li>********8625157</li>
+									<li>********6759355</li>
+									<li>********7915265</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="list_content">
+									<li>电路保护</li>
+									<li>无线远程遥控</li>
+									<li>温度控制</li>
+									<li>网络远程控制</li>
+									<li>理货盘点</li>
+									<li>理货盘点</li>
+									<li>多终端管理</li>
+									<li>手持终端数据采集</li>
+									<li>汽车状态管理</li>
+									<li>电子定位</li>
+									<li>数据采集</li>
+									<li>理货盘点</li>
+									<li>车辆状态显示</li>
+									<li>车辆智能监测</li>
+									<li>车辆智能监测</li>
+									<li>多功能手表</li>
+									<li>多功能手表</li>
+									<li>多功能手表</li>
+									<li>无线数据终端</li>
+									<li>无线数据终端</li>
+									<li>无线数据终端</li>
+									<li>无线数据终端</li>
+									<li>无线扫描</li>
+									<li>多功能手表</li>
+									<li>智能汽车导航</li>
+									<li>行车记录</li>
+									<li>智能物联网锁</li>
+									<li>智能物联网锁</li>
+									<li>智能监控</li>
+									<li>汽车跟踪器</li>
+									<li>汽车定位、车队管理</li>
+									<li>智能支付</li>
+									<li>数据采集终端</li>
+									<li>智能支付</li>
+									<li>数据采集终端</li>
+									<li>智能门店管理</li>
+									<li>智能烟感报警</li>
+									<li>智能翻译</li>
+									<li>理货盘点</li>
+									<li>触摸平板电脑</li>
+									<li>无线数据终端</li>
+									<li>防爆手机</li>
+									<li>无线数据终端</li>
+									<li>双向数据透传</li>
+									<li>智能设备监控</li>
+									<li>短信报警</li>
+									<li>智能监控</li>
+									<li>智能多功能终端</li>
+									<li>数据采集终端</li>
+									<li>工业平板电脑</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="list_content">
+									<li>2G</li>
+									<li>2G</li>
+									<li>2G</li>
+									<li>2G</li>
+									<li>23G</li>
+									<li>23G</li>
+									<li>23G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>23G</li>
+									<li>234G</li>
+									<li>23G</li>
+									<li>23G</li>
+									<li>23G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>23G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>23G</li>
+									<li>2G</li>
+									<li>2G</li>
+									<li>23G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>23G</li>
+									<li>23G</li>
+									<li>23G</li>
+									<li>23G</li>
+									<li>234G</li>
+									<li>2G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>234G</li>
+									<li>23G</li>
+									<li>234G</li>
+									<li>234G</li>
+								</ul>
+							</li>
+							<li id="long">
+								<ul class="list_content">
+									<li>赤峰</li>
+									<li>武汉</li>
+									<li>北京</li>
+									<li>北京</li>
+									<li>广州</li>
+									<li>南京</li>
+									<li>呼和浩特</li>
+									<li>北京</li>
+									<li>武汉</li>
+									<li>南京</li>
+									<li>天津</li>
+									<li>上海</li>
+									<li>天津</li>
+									<li>北京</li>
+									<li>广州</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>深圳</li>
+									<li>合肥</li>
+									<li>郑州</li>
+									<li>青岛</li>
+									<li>青岛</li>
+									<li>北京</li>
+									<li>南宁</li>
+									<li>福州</li>
+									<li>南昌</li>
+									<li>郑州</li>
+									<li>石家庄</li>
+									<li>吉林</li>
+									<li>北京</li>
+									<li>海口</li>
+									<li>南宁</li>
+									<li>北京</li>
+									<li>上海</li>
+									<li>上海</li>
+									<li>石家庄</li>
+									<li>哈尔滨</li>
+									<li>天津</li>
+									<li>抚顺</li>
+									<li>天津</li>
+									<li>武汉</li>
+									<li>北京</li>
+									<li>广州</li>
+									<li>广州</li>
+									<li>深圳</li>
+									<li>东莞</li>
+									<li>福州</li>
+									<li>上海</li>
+									<li>兰州</li>
+									<li>北京</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div id="demo32"></div>
+					</div>
+				</div>		
+			</div>
+		</div>
+
+
+		<!-- 悬浮窗 -->
+		<div id="mask" class="box_hidden"></div>
+		<div id="fix_center" class="box_hidden">
+			<img src="img/close.png" alt="" id="close">
+			<h2>查询结果</h2>
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+	var speed = 15;
+	demo02.innerHTML = demo01.innerHTML;
+	demo12.innerHTML = demo11.innerHTML;
+	demo22.innerHTML = demo21.innerHTML;
+	demo32.innerHTML = demo31.innerHTML;
+	function Marquee() {
+		if (demo02.offsetTop - demo0.scrollTop <= 0) {
+			demo0.scrollTop -= demo01.offsetHeight;
+		} else {
+			demo0.scrollTop++;
+		}
+		if (demo12.offsetTop - demo1.scrollTop <= 0) {
+			demo1.scrollTop -= demo11.offsetHeight;
+		} else {
+			demo1.scrollTop++;
+		}
+		if (demo22.offsetTop - demo2.scrollTop <= 0) {
+			demo2.scrollTop -= demo21.offsetHeight;
+		} else {
+			demo2.scrollTop++;
+		}
+		if (demo32.offsetTop - demo3.scrollTop <= 0) {
+			demo3.scrollTop -= demo31.offsetHeight;
+		} else {
+			demo3.scrollTop++;
+		}
+	}
+	var MyMar = setInterval(Marquee, speed);
+
+	chart1();
+	chart2();
+	chart3();
+	chart4();
+	// demo.onmouseover = function() {
+	// 	clearInterval(MyMar);
+	// }
+	 
+	// demo.onmouseout = function() {
+	// 	MyMar = setInterval(Marquee, speed);
+	// }
+	</script>
+	<script type="text/javascript">
+	var setDateAndTime=setInterval("getNowFormatDate()", 1000);
+	function getNowFormatDate() {
+	    var date = new Date();
+	    var seperator1 = "-";
+	    var seperator2 = ":";
+	    var month = date.getMonth() + 1;
+	    var strDate = date.getDate();
+	    var strHour = date.getHours();
+	    var strMinute = date.getMinutes();
+	    var strSecond = date.getSeconds();
+	    if (month >= 1 && month <= 9) {
+	        month = "0" + month;
+	    }
+	    if (strDate >= 0 && strDate <= 9) {
+	        strDate = "0" + strDate;
+	    }
+	    if (strHour >= 1 && strHour <= 9) {
+	    	strHour = "0" + strHour;
+	    }
+	    if (strMinute >= 0 && strMinute <= 9) {
+	    	strMinute = "0" + strMinute;
+	    }
+	    if (strSecond >= 0 && strSecond <= 9) {
+	    	strSecond = "0" + strSecond;
+	    }
+	    var currentDate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+	    var currentTime = strHour + seperator2 + strMinute + seperator2 + strSecond;
+	    document.getElementById("date").innerHTML=currentDate;
+	    document.getElementById("time").innerHTML=currentTime;
+	}
+	</script>
+</body>
+</html>

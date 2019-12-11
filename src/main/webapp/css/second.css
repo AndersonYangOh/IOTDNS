@@ -1,0 +1,259 @@
+
+@charset "utf-8";
+
+/* big-box */
+
+.big-box{
+  position: relative;
+  width:100%;
+  margin:0 auto;
+  min-width:1300px;
+  max-width: 1920px;
+  height:100%;
+  min-height:600px;
+  max-height: 1080px;
+  background: #202224;
+}
+
+/* top-box */
+.top-box{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left: 0;
+  width:100%;
+  height:72px;
+}
+.top-box ul{
+  position: relative;
+  width:100%;
+  height:100%;
+}
+.top-box ul li:nth-child(1){
+  position: absolute;
+  left:0;
+  width:35%;
+  height:100%;
+  overflow: hidden;
+}
+.top-box ul li:nth-child(1) img{
+  position: absolute;
+  right:20px;
+  top:20px;
+}
+.top-box ul li:nth-child(1) p{
+  position: absolute;
+  left:20px;
+  line-height: 85px;
+  font-size:20px ! important;
+  font-weight: 800;
+  color:#fff;
+}
+.top-box ul li:nth-child(2){
+  position: absolute;
+  left:35%;
+  width:30%;
+}
+.top-box ul li:nth-child(2) p{
+  font-size:30px ! important;
+  font-weight: 800;
+  color:#fff;
+  line-height: 72px;
+  text-align: center;
+}
+.top-box ul li:nth-child(3){
+  position: absolute;
+  right:0;
+  width:35%;
+  height:100%;
+}
+.top-box ul li:nth-child(3) img{
+  position: absolute;
+  left:20px;
+  top:20px;
+}
+.top-box ul li:nth-child(3) p{
+  position: absolute;
+  right:20px;
+  line-height: 85px;
+  font-size:20px ! important;
+  font-weight: 800;
+  color:#fff;
+}
+.light{
+  animation: light 1.5s infinite /* 时间 */;
+  animation-direction: infinite /* infinite重复播放 ；alternate 循环播放*/;
+  animation-iteration-count:  /* 播放次数 */;
+  animation-delay: 0s /* 延时启动 */;
+  animation-fill-mode: forwards;
+    /* Safari and Chrome */
+  -webkit-animation: light 1.5s infinite /* 时间 */;
+  -webkit-animation-direction: infinite /* infinite重复播放 ；alternate 循环播放*/;
+  -webkit-animation-iteration-count:  /* 播放次数 */;
+  -webkit-animation-delay: 0s /* 延时启动 */;
+}
+@keyframes light {
+  0% {
+    opacity: .3
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    opacity: .3
+  }
+}
+@-webkit-keyframes light {
+  0% {
+    opacity: .3
+  }
+  50% {
+    opacity: 1
+  }
+  100% {
+    opacity: .3
+  }
+}
+
+/* top-box-bg */
+.top-box-bg{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1;
+  width:100%;
+  height:200px;
+  
+}
+.top-box-bg ul{
+  position: relative;
+  width:100%;
+  height:100%;
+}
+.top-box-bg ul li:nth-child(1){
+  position: absolute;
+  top:0;
+  left:0;
+  width:35%;
+  height:100%;
+  overflow: hidden;
+  background: url(../img/top-left-bg.png) no-repeat right top;
+  background-size: 685px;
+}
+.top-box-bg ul li:nth-child(2){
+  position: absolute;
+  left:35%;
+  width:30%;
+  height:100%;
+  background: url(../img/top-center-bg.png) repeat-x;
+}
+.top-box-bg ul li:nth-child(3){
+  position: absolute;
+  right:0;
+  width:35%;
+  height:100%;
+  background: url(../img/top-right-bg.png) no-repeat left top;
+  background-size: 685px;
+}
+
+/* left-box */
+.left-box{
+  position: absolute;
+  z-index: 2;
+  width:70%;
+  top:100px;
+  bottom:20px;
+  left:0;
+}
+.left-box ul{
+  height:100%;
+  padding:0 15px 0 20px;
+}
+.left-box ul li{
+  width:100%;
+  height:100%;
+}
+.left-box ul li:nth-child(1){
+  padding:0 0 0 0;
+}
+.left-box ul li div{
+  position: relative;
+  width:100%;
+  height:100%;
+}
+.left-box ul li div p{
+  position: absolute;
+  display: block;
+  padding:7px 0 0 10px;
+  width:100%;
+  height:35px;
+  font-size:14px;
+  color:#fff;
+  background: url(../img/line.png) no-repeat bottom;
+  background-size: 100% 1.8px
+}
+.left-box ul li div img{
+  width:100%;
+  height:100%;
+}
+.data{
+  position: absolute;
+  display: block;
+  top:35px;
+  bottom:0;  
+  width:100%;
+  padding:10px;
+}
+
+/* right-box */
+.right-box{
+  position: absolute;
+  z-index: 2;
+  width:30%;
+  top:100px;
+  bottom:20px;
+  right:0;
+}
+.right-box ul{
+  height:100%;
+  padding:0 20px 0 0;
+}
+.right-box ul li{
+  width:100%;
+  height:50%;
+}
+.right-box ul li:nth-child(1){
+  padding:0 0 10px 0;
+}
+.right-box ul li:nth-child(2){
+  padding:5px 0 0 0;
+}
+.right-box ul li:nth-child(3){
+  padding:10px 0 0 0;
+}
+.right-box ul li div{
+  position: relative;
+  width:100%;
+  height:100%;
+}
+.right-box ul li div p{
+  position: absolute;
+  display: block;
+  padding:7px 0 0 10px;
+  width:100%;
+  height:35px;
+  font-size:14px;
+  color:#fff;
+  background: url(../img/line.png) no-repeat bottom;
+  background-size: 100% 1.8px
+}
+.right-box ul li div img{
+  width:100%;
+  height:100%;
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1200px){
+
+}
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chinaunicom.testweb.dao.AIMVDao">
+	
+	<select id="getDefectReport" resultType="com.chinaunicom.testweb.pojo.AICheckReport">
+		<![CDATA[
+			SELECT a.id as id, a.check_time as checkTime, a.check_result as checkResult, b.type as checkResultName, a.room_id as factoryID, a.pic_dic as picDir 
+			FROM aluminum_inspection_web a JOIN aluminum_defect_code b ON a.check_result=b.id WHERE a.check_result <> 'norm' ORDER BY a.check_time DESC
+		]]>
+	</select>
+	
+	<select id="getCheckStatByCode" resultType="com.chinaunicom.testweb.pojo.AICheckStat">
+		<![CDATA[
+			SELECT (SELECT TYPE FROM aluminum_defect_code WHERE id = #{checkCode}) AS checkResultName, 
+			(SELECT COUNT(1) FROM aluminum_inspection_web WHERE check_result = #{checkCode}) AS count, 
+			(SELECT COUNT(1) FROM aluminum_inspection_web WHERE check_result = #{checkCode})/(SELECT COUNT(1) FROM aluminum_inspection_web) AS rate
+		]]>
+	</select>
+	
+	<select id="getCheckStats" resultType="com.chinaunicom.testweb.pojo.AICheckStat">
+		<![CDATA[
+			SELECT adc.id AS checkResult, adc.type AS checkResultName, IFNULL(t.count,0) as count, IFNULL(t.rate,0) as rate 
+			FROM aluminum_defect_code adc LEFT JOIN 
+			(SELECT check_result, COUNT(check_result) AS count, COUNT(check_result)/(SELECT COUNT(1) FROM aluminum_inspection_web) AS rate FROM aluminum_inspection_web GROUP BY check_result) t 
+			ON adc.id = t.check_result ORDER BY count DESC
+		]]>
+	</select>
+	
+</mapper>
